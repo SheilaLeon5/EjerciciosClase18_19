@@ -360,11 +360,6 @@ public class Ejercicios {
 		return resultado;		
 	}
 	
-	
-	
-	
-	
-	
 				
 	public static void main(String[]args) {
 		
@@ -379,6 +374,7 @@ public class Ejercicios {
 			};		
 		float[] resumenVendedor;
 		resumenVendedor = ejercicios.resumenVendedor;
+		
 		
 
 	//	Persona juan = new Persona();
