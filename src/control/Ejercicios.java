@@ -317,9 +317,17 @@ public class Ejercicios {
 */	 
 	 
 	/* ---------ACTIVIDAD: Dan dos cadenas de caracteres por parámetros que hay que comparar entre sí (CompareTo)
-	 * 
-	 * PENDIENTE
+
 	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -344,36 +352,25 @@ public class Ejercicios {
 	
 /* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes ( recorrer por columnas). 31/10/2018
 		Poner nombre de meses y vendedores (String[] meses{"enero","febrero"...} , String("pepe"...)
-*/	
-	public float[] resumenMes(float[][]meses){
-		float [] resultado = new float[12];
-			for (int j = 0; j < meses[0].length; j++) {
-				for (int i = 0; i < meses.length; i++) {
-				
-					resultado[j] += meses[i][j];
-					
-				}
-				System.out.println(Arrays.toString(resultado));
-			}
-			return resultado;
 	
+	public float[] resumenMes(float[][]meses){
+		String [] nombreMeses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
+		float [] resultado = new float[12];
+		
+		for (int j = 0; j < meses[0].length; j++) {
+			for (int i = 0; i < meses.length; i++) {
+				resultado[j] += meses[i][j];
+			}
+			System.out.println(nombreMeses[j] + " " + resultado[j] + "€");
+		}
+		return resultado;
 		
 	}
 	
-	
+*/	
 				
 	public static void main(String[]args) {
 		
-		Ejercicios ejercicios = new Ejercicios();
-		float [][] ventasMeses =
-			{
-				// hay tres filas (vendedores) y 12 columnas (meses)	
-				{12.5f,13.5f,8.5f,5.0f,10.5f,9.5f,20.5f,10.5f,4.0f,6.5f,5.5f,6.05f},
-				{12.5f,13.5f,5.5f,5.0f,10.5f,4.5f,20.5f,1.5f,3.0f,6.5f,5.5f,6.05f},
-				{12.5f,18.5f,8.5f,5.0f,2.5f,9.5f,20.5f,10.5f,9.0f,6.5f,5.5f,6.05f}
-			};		
-		float[] resumenMeses;
-		resumenMeses = ejercicios.resumenMes(ventasMeses);
 		
 
 	//	Persona juan = new Persona();
@@ -387,8 +384,17 @@ public class Ejercicios {
 		
 /*		
  		//31/10/2018-----------------------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes(recorrer por columnas)
- 
- 
+ 		 Ejercicios ejercicios = new Ejercicios();
+		float [][] ventasMeses =
+			{
+				// hay tres filas (vendedores) y 12 columnas (meses)	
+				{12.5f,13.5f,8.5f,5.0f,10.5f,9.5f,20.5f,10.5f,4.0f,6.5f,5.5f,6.05f},
+				{12.5f,13.5f,5.5f,5.0f,10.5f,4.5f,20.5f,1.5f,3.0f,6.5f,5.5f,6.05f},
+				{12.5f,18.5f,8.5f,5.0f,2.5f,9.5f,20.5f,10.5f,9.0f,6.5f,5.5f,6.05f}
+			};		
+		ejercicios.resumenMes(ventasMeses);
+ 		 
+ 		 
  		//31/10/2018-----------------------ACTIVIDAD: Hacer un método que recorra y devuleva un acumulado de ventas por vendedor. (recorrer por filas)
  		 Ejercicios ejercicios = new Ejercicios();
 		float [][] VentasYear =
@@ -404,6 +410,13 @@ public class Ejercicios {
  
  		//25/10/2018-----------------------ACTIVIDAD: Dan dos cadenas de caracteres por parámetros que hay que comparar entre sí (CompareTo)
  		PENDIENTE
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
  		
  		//25/10/2018-----------------------ACTIVIDAD: Dado una String pasada por parámetros mostrar por pantalla caracter a caracter el String (Método CharAt)
  		Ejercicios ejercicios = new Ejercicios();
