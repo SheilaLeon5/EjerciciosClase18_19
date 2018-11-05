@@ -325,7 +325,7 @@ public class Ejercicios {
 	
 	/* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un acumulado de ventas por vendedor. 31/10/2018
 	
-	*/
+	
 	public float [] resumenVendedor(float[][] ventas) {
 		float sumVendedor =0;
 		float [] resultado = new float[ventas.length];  //Declaración array
@@ -335,46 +335,45 @@ public class Ejercicios {
 				sumVendedor += ventas[i][j];
 			}
 			resultado[i] = sumVendedor;
-			//System.out.println("Vendedor" + i + "ha ganado: " + sumVendedor + "€" );
+			System.out.println("Vendedor " + i + " ha ganado: " + sumVendedor + "€" );
 		}
 		return resultado;		
 	}
 	
-	
+	*/
 	
 /* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes ( recorrer por columnas). 31/10/2018
 		Poner nombre de meses y vendedores (String[] meses{"enero","febrero"...} , String("pepe"...)
-	*/
-	
-	public float [] resumenVendedor(float[][] ventas) {
-		float sumVendedor =0;
-		float [] resultado = new float[ventas.length];  //Declaración array
-		for (int i = 0; i < ventas.length; i++) {
-			sumVendedor = 0;
-			for (int j = 0; j < ventas[i].length; j++) {  //Especificamos i porque nos encontramos en la linea i
-				sumVendedor += ventas[i][j];
+*/	
+	public float[] resumenMes(float[][]meses){
+		float [] resultado = new float[12];
+			for (int j = 0; j < meses[0].length; j++) {
+				for (int i = 0; i < meses.length; i++) {
+				
+					resultado[j] += meses[i][j];
+					
+				}
+				System.out.println(Arrays.toString(resultado));
 			}
-			resultado[i] = sumVendedor;
-			//System.out.println("Vendedor" + i + "ha ganado: " + sumVendedor + "€" );
-		}
-		return resultado;		
+			return resultado;
+	
+		
 	}
+	
 	
 				
 	public static void main(String[]args) {
 		
-		
 		Ejercicios ejercicios = new Ejercicios();
-		float [][] VentasYear =
+		float [][] ventasMeses =
 			{
 				// hay tres filas (vendedores) y 12 columnas (meses)	
 				{12.5f,13.5f,8.5f,5.0f,10.5f,9.5f,20.5f,10.5f,4.0f,6.5f,5.5f,6.05f},
 				{12.5f,13.5f,5.5f,5.0f,10.5f,4.5f,20.5f,1.5f,3.0f,6.5f,5.5f,6.05f},
 				{12.5f,18.5f,8.5f,5.0f,2.5f,9.5f,20.5f,10.5f,9.0f,6.5f,5.5f,6.05f}
 			};		
-		float[] resumenVendedor;
-		resumenVendedor = ejercicios.resumenVendedor;
-		
+		float[] resumenMeses;
+		resumenMeses = ejercicios.resumenMes(ventasMeses);
 		
 
 	//	Persona juan = new Persona();
@@ -387,8 +386,21 @@ public class Ejercicios {
 
 		
 /*		
- 		//31/10/2018-----------------------ACTIVIDAD: Hacer un método que recorra y devuleva un acumulado de ventas por vendedor.
- 		 
+ 		//31/10/2018-----------------------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes(recorrer por columnas)
+ 
+ 
+ 		//31/10/2018-----------------------ACTIVIDAD: Hacer un método que recorra y devuleva un acumulado de ventas por vendedor. (recorrer por filas)
+ 		 Ejercicios ejercicios = new Ejercicios();
+		float [][] VentasYear =
+			{
+				// hay tres filas (vendedores) y 12 columnas (meses)	
+				{12.5f,13.5f,8.5f,5.0f,10.5f,9.5f,20.5f,10.5f,4.0f,6.5f,5.5f,6.05f},
+				{12.5f,13.5f,5.5f,5.0f,10.5f,4.5f,20.5f,1.5f,3.0f,6.5f,5.5f,6.05f},
+				{12.5f,18.5f,8.5f,5.0f,2.5f,9.5f,20.5f,10.5f,9.0f,6.5f,5.5f,6.05f}
+			};		
+		float[] resumenVendedor;
+		resumenVendedor = ejercicios.resumenVendedor(VentasYear);
+		
  
  		//25/10/2018-----------------------ACTIVIDAD: Dan dos cadenas de caracteres por parámetros que hay que comparar entre sí (CompareTo)
  		PENDIENTE
