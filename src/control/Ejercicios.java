@@ -368,9 +368,36 @@ public class Ejercicios {
 	}
 	
 */	
+	
+	
+	/*---------ACTIVIDAD: Dado un array de cadenas, devolver la lista como números.---------- 06/11/2018 
+						En caso de que no pueda devolver el valor -1
+						El array de salida tiene el MISMO numero de elementos que el de entrada
+	*/
+	
+	public int [] convierteCadenas (String[] cadenas) {
+		int[] resultado = new int[cadenas.length];
+		for (int i = 0; i < cadenas.length; i++) {
+			try {
+				resultado[i] = Integer.parseInt(cadenas[i]);
+				System.out.println("Lllega aquí");
+			}
+			catch(NumberFormatException ex){
+					resultado[i]= -1;   //devuelve -1 si no es convertible
+			}
+		}
+		System.out.println(Arrays.toString(resultado));
+		return resultado;	
+	}
+	
+	
+	
 				
 	public static void main(String[]args) {
+		Ejercicios ejercicios = new Ejercicios();
+		String[] cadenaNumerica={"123","8k8","9811","xyz"};
 		
+		 ejercicios.convierteCadenas(cadenaNumerica);
 		
 
 	//	Persona juan = new Persona();
