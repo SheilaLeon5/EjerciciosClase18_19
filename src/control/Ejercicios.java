@@ -332,7 +332,7 @@ public class Ejercicios {
 	
 	
 	/* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un acumulado de ventas por vendedor. 31/10/2018
-	
+
 	
 	public float [] resumenVendedor(float[][] ventas) {
 		float sumVendedor =0;
@@ -347,12 +347,12 @@ public class Ejercicios {
 		}
 		return resultado;		
 	}
-	
 	*/
 	
-/* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes ( recorrer por columnas). 31/10/2018
-		Poner nombre de meses y vendedores (String[] meses{"enero","febrero"...} , String("pepe"...)
 	
+	/* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes ( recorrer por columnas). 31/10/2018
+		Poner nombre de meses y vendedores (String[] meses{"enero","febrero"...} , String("pepe"...)
+	*/	
 	public float[] resumenMes(float[][]meses){
 		String [] nombreMeses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
 		float [] resultado = new float[12];
@@ -366,14 +366,31 @@ public class Ejercicios {
 		return resultado;
 		
 	}
+	 	
 	
-*/	
+	/*
+	//-------- Extension ACTIVIDAD ANTERIOR: Mostrar nombre de los vendedores-----06/11/2018
+	public void mostrarVentasVendedor(){
+		String [] nombresVendedor = {"JUAN CARLOS","ISABEL","MARTA"};
+		float [][] ventasYear =
+			{
+				// hay tres filas (vendedores) y 12 columnas (meses)	
+				{12.5f,13.5f,8.5f,5.0f,10.5f,9.5f,20.5f,10.5f,4.0f,6.5f,5.5f,6.05f},
+				{12.5f,13.5f,5.5f,5.0f,10.5f,4.5f,20.5f,1.5f,3.0f,6.5f,5.5f,6.05f},
+				{12.5f,18.5f,8.5f,5.0f,2.5f,9.5f,20.5f,10.5f,9.0f,6.5f,5.5f,6.05f}
+			};		
+		float [] ventas = resumenVendedor(ventasYear);   //Hemos usado dos metodos. Aquí usamos el método "resumenVendedor"
+		for (int i = 0; i < ventas.length; i++) {
+			System.out.println(nombresVendedor[i] + " :" + ventas[i]);
+		}	
+	}
+	*/
 	
 	
 	/*---------ACTIVIDAD: Dado un array de cadenas, devolver la lista como números.---------- 06/11/2018 
 						En caso de que no pueda devolver el valor -1
 						El array de salida tiene el MISMO numero de elementos que el de entrada
-	*/
+	
 	
 	public int [] convierteCadenas (String[] cadenas) {
 		int[] resultado = new int[cadenas.length];
@@ -390,14 +407,20 @@ public class Ejercicios {
 		return resultado;	
 	}
 	
-	
+	*/
 	
 				
 	public static void main(String[]args) {
-		Ejercicios ejercicios = new Ejercicios();
-		String[] cadenaNumerica={"123","8k8","9811","xyz"};
 		
-		 ejercicios.convierteCadenas(cadenaNumerica);
+		Ejercicios ejercicios = new Ejercicios();
+		float [][] ventasMeses =
+			{
+				// hay tres filas (vendedores) y 12 columnas (meses)	
+				{12.5f,13.5f,8.5f,5.0f,10.5f,9.5f,20.5f,10.5f,4.0f,6.5f,5.5f,6.05f},
+				{12.5f,13.5f,5.5f,5.0f,10.5f,4.5f,20.5f,1.5f,3.0f,6.5f,5.5f,6.05f},
+				{12.5f,18.5f,8.5f,5.0f,2.5f,9.5f,20.5f,10.5f,9.0f,6.5f,5.5f,6.05f}
+			};		
+		ejercicios.resumenMes(ventasMeses);
 		
 
 	//	Persona juan = new Persona();
@@ -410,6 +433,18 @@ public class Ejercicios {
 
 		
 /*		
+ 		
+ 
+ 		//06/11/2018-----------------------ACTIVIDAD: Dado un array de cadenas, devolver la lista como números.---------- 
+ 		Ejercicios ejercicios = new Ejercicios();
+		String[] cadenaNumerica={"123","8k8","9811","xyz"};
+		ejercicios.convierteCadenas(cadenaNumerica);
+		
+		-------- Extension ACTIVIDAD ANTERIOR: Mostrar nombre de los vendedores-----06/11/2018
+ 		Ejercicios ejercicios = new Ejercicios();
+		ejercicios.mostrarVentasVendedor();
+		
+		
  		//31/10/2018-----------------------ACTIVIDAD: Hacer un método que recorra y devuleva un resumen de cada mes(recorrer por columnas)
  		 Ejercicios ejercicios = new Ejercicios();
 		float [][] ventasMeses =
