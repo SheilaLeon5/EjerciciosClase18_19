@@ -410,7 +410,7 @@ public class Ejercicios {
 	*/
 	
 	
-	/*-------ACTIVIDAD: Realizar un reloj ------- 07/11/2018 */
+	/*-------ACTIVIDAD: Realizar un reloj ------- 07/11/2018 
 				
 	public void  mostrarReloj(){
 		//Recorrer horas
@@ -429,17 +429,74 @@ public class Ejercicios {
 		}
 
 	}
+	*/
 	
-	/*-----ACTIVIDAD: Mostrar los 20 primeros números primos*/
+	//---- ACTIVIDAD: Mostrar si el número es primo --------- 08/11/2018 
+	public boolean esPrimo(int numero) {
+		for (int i = 2; i < numero; i++) { 
+			if (numero%i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 	
 	
+	
+	//-----ACTIVIDAD: Listar los números primos del 1 hasta el 300 (usando tambíen el método  'esPrimo')---------------08/11/2018
+	/*public void listarPrimos(int desde , int hasta) {
+		for (int i = desde; i < hasta; i++) {
+			if(esPrimo(i)) {
+				System.out.print(i + ", ");
+			}
+		}
+	}
+	
+	*/
+	
+	
+	/*----ACTIVIDAD: Listar  los x números primeros -----------08/11/2018  (usando tambíen el método  'esPrimo')
+	public void listarPrimos2(int desde, int cuantos) {
+		int contador = 0;
+		while(contador < cuantos) {
+			if(esPrimo(++desde)) {
+				System.out.print(desde + ", ");
+				contador++;
+			}
+		}
+	}
+	*/
+	
+	/*----ACTIVIDAD: Meter en una lista los x números primos -----------08/11/2018  (usando tambíen el método  'esPrimo')*/
+	public int[] listarPrimos3(int desde, int cuantos) {
+		int[]resultado = new int[cuantos];
+		int contador = 0;
+		while(contador < cuantos) {
+			if(esPrimo(desde)) {
+				resultado[contador]=desde++;
+				contador++;
+			}
+		}
+		return null;
+	}
 	
 	
 	
 	public static void main(String[]args) {
 		
 		Ejercicios ejercicios = new Ejercicios();
-		ejercicios.mostrarReloj();
+		
+		int inicio=500;
+		int cuantos=5;
+		int[] numeros = ejercicios.listarPrimos3(inicio,cuantos);
+		//System.out.println(Arrays.toString(numeros));
+		
+		
+		
+		//EXAMENpasar numeros de metodos a otros, cambiamos la cabecera 
+		
+		
+		
 		
 
 	//	Persona juan = new Persona();
@@ -452,6 +509,23 @@ public class Ejercicios {
 
 		
 /*		
+ 		
+ 
+ 		//08/11/2018 --------------------ACTIVIDAD:  Listar los x números primeros (usando tambíen el método  'esPrimo')----------
+ 		 	Ejercicios ejercicios = new Ejercicios();
+		ejercicios.listarPrimos2(1,10);
+ 		
+ 		  
+ 
+ 		//08/11/2018---------------------ACTIVIDAD: Mostrar los 20 primeros números primos (usando tambíen el método  'esPrimo')
+ 		 Ejercicios ejercicios = new Ejercicios();
+		ejercicios.listarPrimos(1,100);
+ 		 
+		
+		//08/11/2018---------------------ACTIVIDAD: Mostrar si el número es primo
+		Ejercicios ejercicios = new Ejercicios();
+		System.out.println(ejercicios.esPrimo(8));
+		
  		// 07/11/2018 -------ACTIVIDAD: Realizar un reloj -------
  		 Ejercicios ejercicios = new Ejercicios();
 		ejercicios.mostrarReloj();
