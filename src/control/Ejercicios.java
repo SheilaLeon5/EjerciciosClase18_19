@@ -467,7 +467,7 @@ public class Ejercicios {
 	}
 	*/
 	
-	/*----ACTIVIDAD: Meter en una lista los x números primos -----------08/11/2018  (usando tambíen el método  'esPrimo')*/
+	/*----ACTIVIDAD: Meter en una lista los x números primos -----------08/11/2018  (usando tambíen el método  'esPrimo')
 	public int[] listarPrimos3(int desde, int cuantos) {
 		int[]resultado = new int[cuantos];
 		int contador = 0;
@@ -480,16 +480,32 @@ public class Ejercicios {
 		return null;
 	}
 	
+	*/
+	
+// HACIENDO ACTIVIDAD YO MISMA	
+	public int[] listarPrimos3(int desde, int cuantos) {
+		int contador=0;
+		int[]resultado = new int[cuantos];
+		for (int i = desde; i < resultado.length; i++) { 
+			if (esPrimo(desde - 1)){
+				resultado[contador]= desde++;
+				contador++;
+			}
+		}
+		return resultado;
+	}
+	
+	
 	
 	
 	public static void main(String[]args) {
 		
 		Ejercicios ejercicios = new Ejercicios();
 		
-		int inicio=500;
-		int cuantos=5;
+		int inicio=5;
+		int cuantos=8;
 		int[] numeros = ejercicios.listarPrimos3(inicio,cuantos);
-		//System.out.println(Arrays.toString(numeros));
+		System.out.println(Arrays.toString(numeros));
 		
 		
 		
