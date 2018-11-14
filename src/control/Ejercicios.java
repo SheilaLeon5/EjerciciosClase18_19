@@ -43,28 +43,28 @@ public class Ejercicios {
 	}
 	
 	
-	//ACTIVIDAD: Mostrar por consola los números comprendidos entre dos enteros, a y b 
-	
-			//1Parte método:. prototipo o cabecera
-			public void listaIntervaloEnteros(int primero, int ultimo){
-				//2Parte método: cuerpo o implementación del método
-				int i=primero;
-				while(i < ultimo) 
-					System.out.println(++i);
-					i++;
-					i=i+1; 
-				for (int j = primero; j <= ultimo; j++) 
-					System.out.println(j++);
-				
-					
-					// true /false
-				 boolean condicion = true;
-				 if (condicion) {
-					 // en caso de verdadero
-				 }else {
-					 // la otra opción, falso
-				 }
-			}
+			//ACTIVIDAD: Mostrar por consola los números comprendidos entre dos enteros, a y b 
+			
+					//1Parte método:. prototipo o cabecera
+					public void listaIntervaloEnteros(int primero, int ultimo){
+						//2Parte método: cuerpo o implementación del método
+						int i=primero;
+						while(i < ultimo) 
+							System.out.println(++i);
+							i++;
+							i=i+1; 
+						for (int j = primero; j <= ultimo; j++) 
+							System.out.println(j++);
+						
+						
+							// true /false
+						 boolean condicion = true;
+						 if (condicion) {
+							 // en caso de verdadero
+						 }else {
+							 // la otra opción, falso
+						 }
+					}
 			
 			// ---------------- ACTIVIDAD ----------------------------------------------------- 10/10/2018
 			Dado una “cadena” (String) devolver el valor en forma de número entero correspondiente. 
@@ -253,7 +253,7 @@ public class Ejercicios {
 				}
 			}
 			
-		
+*/		
 		//-----------ACTIVIDAD: Devolver un array con 'n' numeros aleatorios entre 'inferior' y 'superior' . Entre 100 y 500
 						
 			public int[] gerarListaAleatorios (int n, int inferior, int superior) {
@@ -266,7 +266,7 @@ public class Ejercicios {
 				return null;
 			}
 			
-*/				
+				
 		//----------ACTIVIDAD: devolver la cantidad de veces que se repiten los números en 10 veces que se genera los números aleatorios. Rango numeros 1-6	-- 18/10/2018		
 			//Versión Profesor
 /*			public int[] generaEstadisticaAparicion (int n, int inferior, int superior) {
@@ -432,14 +432,14 @@ public class Ejercicios {
 	*/
 	
 	//---- ACTIVIDAD: Mostrar si el número es primo --------- 08/11/2018 
-	public boolean esPrimo(int numero) {
+	/*public boolean esPrimo(int numero) {
 		for (int i = 2; i < numero; i++) { 
 			if (numero%i == 0) {
 				return false;
 			}
 		}
 		return true;
-	}
+	}*/
 	
 	
 	
@@ -483,7 +483,7 @@ public class Ejercicios {
 	*/
 	
 // HACIENDO ACTIVIDAD YO MISMA	
-	public int[] listarPrimos3(int desde, int cuantos) {
+	/*public int[] listarPrimos3(int desde, int cuantos) {
 		int contador=0;
 		int[]resultado = new int[cuantos];
 		for (int i = desde; i < resultado.length; i++) { 
@@ -494,19 +494,52 @@ public class Ejercicios {
 		}
 		return resultado;
 	}
+	*/
 	
-	
+			
+		//recorrer matriz irregular	
+	public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
+		int numColMax=0;
+		for (int i = 0; i < matriz.length; i++) {
+			if(matriz[i].length > numColMax) {
+				numColMax= matriz[i].length;
+			}	
+		}
+		int [] resultado = new int[numColMax];
+		for (int j = 0; j < numColMax; j++) {
+			for (int i = 0; i < matriz.length; i++) {
+				resultado[j] += matriz[i][j]; 
+			}
+		}
+		return resultado;
+		
+	}
+			
 	
 	
 	public static void main(String[]args) {
 		
+		int matrizNum[][]= {
+				{5,4,8},
+				{7,2,3,4},
+				{8,5}
+		};
+		
 		Ejercicios ejercicios = new Ejercicios();
+		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);
+		
+		
+		
+		
+		
+		
+		/*Ejercicios ejercicios = new Ejercicios();
 		
 		int inicio=5;
 		int cuantos=8;
 		int[] numeros = ejercicios.listarPrimos3(inicio,cuantos);
 		System.out.println(Arrays.toString(numeros));
-		
+		*/
 		
 		
 		//EXAMENpasar numeros de metodos a otros, cambiamos la cabecera 
@@ -524,8 +557,20 @@ public class Ejercicios {
 		
 
 		
+		
+		
 /*		
+ 		//14/11/2018 !!!!!!!!!
+ 		 * ACTIVIDAD GENERAR NUM ALEATORIOS Y ORDENARLOS ; USANDO METODOS
  		
+ 
+ 		//08/11/2018 -------------------ACTIVIDAD:Meter en una lista los x números primos   ¡¡¡¡CORREGIR!!!!
+ 		Ejercicios ejercicios = new Ejercicios();
+		int inicio=5;
+		int cuantos=8;
+		int[] numeros = ejercicios.listarPrimos3(inicio,cuantos);
+		System.out.println(Arrays.toString(numeros));
+ 
  
  		//08/11/2018 --------------------ACTIVIDAD:  Listar los x números primeros (usando tambíen el método  'esPrimo')----------
  		 	Ejercicios ejercicios = new Ejercicios();
