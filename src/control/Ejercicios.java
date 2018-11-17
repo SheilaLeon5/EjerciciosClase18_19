@@ -432,14 +432,14 @@ public class Ejercicios {
 	*/
 	
 	//---- ACTIVIDAD: Mostrar si el número es primo --------- 08/11/2018 
-	/*public boolean esPrimo(int numero) {
+	public boolean esPrimo(int numero) {
 		for (int i = 2; i < numero; i++) { 
 			if (numero%i == 0) {
 				return false;
 			}
 		}
 		return true;
-	}*/
+	}
 	
 	
 	
@@ -483,7 +483,7 @@ public class Ejercicios {
 	*/
 	
 // HACIENDO ACTIVIDAD YO MISMA	
-	/*public int[] listarPrimos3(int desde, int cuantos) {
+	public int[] listarPrimos3(int desde, int cuantos) {
 		int contador=0;
 		int[]resultado = new int[cuantos];
 		for (int i = desde; i < resultado.length; i++) { 
@@ -494,11 +494,11 @@ public class Ejercicios {
 		}
 		return resultado;
 	}
-	*/
+	
 	
 			
 		//recorrer matriz irregular	
-	public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
+	/*public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
 		int numColMax=0;
 		for (int i = 0; i < matriz.length; i++) {
 			if(matriz[i].length > numColMax) {
@@ -514,11 +514,11 @@ public class Ejercicios {
 		return resultado;
 		
 	}
-			
+*/			
 	
 	
 	public static void main(String[]args) {
-		
+		/*
 		int matrizNum[][]= {
 				{5,4,8},
 				{7,2,3,4},
@@ -526,21 +526,19 @@ public class Ejercicios {
 		};
 		
 		Ejercicios ejercicios = new Ejercicios();
-		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);
+		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);*/
 		
 		
+	
 		
-		
-		
-		
-		/*Ejercicios ejercicios = new Ejercicios();
+		Ejercicios ejercicios = new Ejercicios();
 		
 		int inicio=5;
 		int cuantos=8;
 		int[] numeros = ejercicios.listarPrimos3(inicio,cuantos);
 		System.out.println(Arrays.toString(numeros));
-		*/
-		
+		System.out.println(5/1);
+
 		
 		//EXAMENpasar numeros de metodos a otros, cambiamos la cabecera 
 		
@@ -573,7 +571,7 @@ public class Ejercicios {
  
  
  		//08/11/2018 --------------------ACTIVIDAD:  Listar los x números primeros (usando tambíen el método  'esPrimo')----------
- 		 	Ejercicios ejercicios = new Ejercicios();
+ 		 Ejercicios ejercicios = new Ejercicios();
 		ejercicios.listarPrimos2(1,10);
  		
  		  
