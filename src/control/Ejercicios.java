@@ -432,14 +432,14 @@ public class Ejercicios {
 	*/
 	
 	//---- ACTIVIDAD: Mostrar si el número es primo --------- 08/11/2018 
-	public boolean esPrimo(int numero) {
+	/*public boolean esPrimo(int numero) {
 		for (int i = 2; i < numero; i++) { 
 			if (numero%i == 0) {
 				return false;
 			}
 		}
 		return true;
-	}
+	}*/
 	
 	
 	
@@ -452,10 +452,10 @@ public class Ejercicios {
 		}
 	}
 	
-	*/
 	
 	
-	/*----ACTIVIDAD: Listar  los x números primeros -----------08/11/2018  (usando tambíen el método  'esPrimo')
+	
+	----ACTIVIDAD: Listar  los x números primeros -----------08/11/2018  (usando tambíen el método  'esPrimo')
 	public void listarPrimos2(int desde, int cuantos) {
 		int contador = 0;
 		while(contador < cuantos) {
@@ -468,34 +468,42 @@ public class Ejercicios {
 	*/
 	
 	/*----ACTIVIDAD: Meter en una lista los x números primos -----------08/11/2018  (usando tambíen el método  'esPrimo')
+	
 	public int[] listarPrimos3(int desde, int cuantos) {
 		int[]resultado = new int[cuantos];
 		int contador = 0;
-		while(contador < cuantos) {
+		while(contador < resultado.length) {
 			if(esPrimo(desde)) {
-				resultado[contador]=desde++;
+				resultado[contador]=desde;
 				contador++;
 			}
-		}
-		return null;
-	}
-	
-	*/
-	
-// HACIENDO ACTIVIDAD YO MISMA	
-	public int[] listarPrimos3(int desde, int cuantos) {
-		int contador=0;
-		int[]resultado = new int[cuantos];
-		for (int i = desde; i < resultado.length; i++) { 
-			if (esPrimo(desde - 1)){
-				resultado[contador]= desde++;
-				contador++;
-			}
+			
+			desde++;
 		}
 		return resultado;
 	}
+	*/
 	
 	
+	//---ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 14/11/2018
+	
+		public void ordenarArray(int[] numeros) {
+
+
+		}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
 			
 		//recorrer matriz irregular	
 	/*public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
@@ -518,6 +526,11 @@ public class Ejercicios {
 	
 	
 	public static void main(String[]args) {
+		Ejercicios ejercicios = new Ejercicios();
+		int ordenarArray[]= {40,8,2,1,30};
+		ejercicios.ordenarArray(ordenarArray);
+		System.out.println(Arrays.toString(ordenarArray));
+		
 		/*
 		int matrizNum[][]= {
 				{5,4,8},
@@ -528,21 +541,7 @@ public class Ejercicios {
 		Ejercicios ejercicios = new Ejercicios();
 		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);*/
 		
-		
-	
-		
-		Ejercicios ejercicios = new Ejercicios();
-		
-		int inicio=5;
-		int cuantos=8;
-		int[] numeros = ejercicios.listarPrimos3(inicio,cuantos);
-		System.out.println(Arrays.toString(numeros));
-		System.out.println(5/1);
-
-		
 		//EXAMENpasar numeros de metodos a otros, cambiamos la cabecera 
-		
-		
 		
 		
 
@@ -561,8 +560,13 @@ public class Ejercicios {
  		//14/11/2018 !!!!!!!!!
  		 * ACTIVIDAD GENERAR NUM ALEATORIOS Y ORDENARLOS ; USANDO METODOS
  		
+ 		//14/11/2018 -------------------ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 
+ 		
+ 		
+ 		
+ 		
  
- 		//08/11/2018 -------------------ACTIVIDAD:Meter en una lista los x números primos   ¡¡¡¡CORREGIR!!!!
+ 		//08/11/2018 -------------------ACTIVIDAD:Meter en una lista los x números primos 
  		Ejercicios ejercicios = new Ejercicios();
 		int inicio=5;
 		int cuantos=8;
@@ -573,7 +577,6 @@ public class Ejercicios {
  		//08/11/2018 --------------------ACTIVIDAD:  Listar los x números primeros (usando tambíen el método  'esPrimo')----------
  		 Ejercicios ejercicios = new Ejercicios();
 		ejercicios.listarPrimos2(1,10);
- 		
  		  
  
  		//08/11/2018---------------------ACTIVIDAD: Mostrar los 20 primeros números primos (usando tambíen el método  'esPrimo')
