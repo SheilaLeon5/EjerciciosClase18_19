@@ -226,7 +226,7 @@ public class Ejercicios {
 			  	 - generar un entero y ponerlo en la posicion
 			  	 - devolver array
 			  */
-/*			 					
+			 					
 			public  int[] generaAleatorio (int n) {
 				Random rnd = new Random();
 				int [] resultado= new int[n];   	//Declaración e Inicialización del array
@@ -240,7 +240,7 @@ public class Ejercicios {
 					return resultado;
 			}
 
-			
+/*			
 			
 			
 		// -----------ACTIVIDAD: IMPRIME POR CONSOLA n números enteros aleatorios entre 1-100  (ENUNCIADO NUEVO,SIMILAR ANTERIOR)-- 17/10/2018
@@ -252,20 +252,20 @@ public class Ejercicios {
 					System.out.println(i + 1 + ".-" + numero);
 				}
 			}
-			
-*/		
+		
+		
 		//-----------ACTIVIDAD: Devolver un array con 'n' numeros aleatorios entre 'inferior' y 'superior' . Entre 100 y 500
 						
-			public int[] gerarListaAleatorios (int n, int inferior, int superior) {
+			public int[] generarListaAleatorios (int n, int inferior, int superior) {
 				Random rnd = new Random();
 				int [] numero = new int[n];
 				for(int i = 0; i<n; i++) {
-					numero[i]= rnd.nextInt(400)+100;
+					numero[i]= inferior + rnd.nextInt(superior-inferior + 1);
 					System.out.println(i + ".- Numeros aletorios entre: " + inferior + "-"+ superior + ":" + Arrays.toString(numero));
 				}
 				return null;
 			}
-			
+*/				
 				
 		//----------ACTIVIDAD: devolver la cantidad de veces que se repiten los números en 10 veces que se genera los números aleatorios. Rango numeros 1-6	-- 18/10/2018		
 			//Versión Profesor
@@ -486,27 +486,78 @@ public class Ejercicios {
 	
 	
 	//---ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 14/11/2018
-	
+/*	
 		public void ordenarArray(int[] numeros) {
-
-
+			for (int i = 0; i < numeros.length -1; i++) {
+				for (int j = i+1; j < numeros.length; j++) {
+					if(numeros[i] > numeros[j]) {
+						int numComparador = numeros[i];
+						 numeros[i] = numeros[j];
+						 numeros[j] = numComparador;
+					}
+				}
+			}
+		}			
+*/
+			
+	//---ACTIVIDAD: Ordenar un array de cadenas  14/11/2018
+			/* 	
+			 *  ¿Qué devuelve compareTo?
+			 * devuelve <0, entonces la cadena que llama al método es primero lexicográficamente
+			 * 	devuelve == 0 entonces las dos cadenas son lexicográficamente equivalentes
+			 * 	devuelve> 0, entonces el parámetro pasado al método compareTo es lexicográficamente el primero.
+			 */
+	/*public void ordenarCadena(String[] cadenas ) {
+		for (int i = 0; i < cadenas.length -1; i++) {
+			for (int j = i+1; j < cadenas.length; j++) {
+				if(cadenas[i].compareTo(cadenas[j]) > 0) {
+					String cadenaMayor = cadenas[i];
+					cadenas[i] = cadenas[j];
+					cadenas[j] = cadenaMayor;
+				}
+			}
 		}
+	}*/
 			
 			
 			
 			
 			
+	//---ACTIVIDAD: Usar el método "generarListaAleatorios" y ordenar los numeros	14/11/2018 	
+			/*
+			 *  explicación :El método generarListaAleatorios está creado en esta misma clase
+			 *  pero con unos cambios es por ello que decidí copiar y pegar con las variaciones
+			 *  justo encima del método que lo va a llamar para mayor claridad.
+			 */
+/*				public int[] generarListaAleatorios (int n, int inferior, int superior) {
+					Random rnd = new Random();
+					int [] numero = new int[n];
+					for(int i = 0; i<n; i++) {
+						numero[i]= inferior + rnd.nextInt(superior-inferior + 1);
+					}
+					return numero;
+				}	
 			
+		public void ordenarArray() {
+			int[] numeros =generarListaAleatorios(5, 1, 40);
+			System.out.println(Arrays.toString(numeros) + " Números aleatórios");
+			for (int i = 0; i < numeros.length -1; i++) {
+				for (int j = i+1; j < numeros.length; j++) {
+					if(numeros[i] > numeros[j]) {
+						int numComparador = numeros[i];
+						 numeros[i] = numeros[j];
+						 numeros[j] = numComparador;
+					}
+				}
+			}System.out.println(Arrays.toString(numeros) + " Números aleatorios ordenados");
+		}
+*/
 			
-			
-			
-			
-			
-			
+	//---ACTIVIDAD: (Recorrer matriz irregular )Sumar las columnas de un matriz heterogenea o irregular  14/11/2018
 
 			
 		//recorrer matriz irregular	
-	/*public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
+	public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
 		int numColMax=0;
 		for (int i = 0; i < matriz.length; i++) {
 			if(matriz[i].length > numColMax) {
@@ -522,27 +573,22 @@ public class Ejercicios {
 		return resultado;
 		
 	}
-*/			
+		
 	
 	
 	public static void main(String[]args) {
-		Ejercicios ejercicios = new Ejercicios();
-		int ordenarArray[]= {40,8,2,1,30};
-		ejercicios.ordenarArray(ordenarArray);
-		System.out.println(Arrays.toString(ordenarArray));
+
 		
-		/*
+		
 		int matrizNum[][]= {
 				{5,4,8},
 				{7,2,3,4},
 				{8,5}
-		};
+		};		
 		
 		Ejercicios ejercicios = new Ejercicios();
-		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);*/
-		
-		//EXAMENpasar numeros de metodos a otros, cambiamos la cabecera 
-		
+		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);
+				
 		
 
 	//	Persona juan = new Persona();
@@ -557,13 +603,24 @@ public class Ejercicios {
 		
 		
 /*		
- 		//14/11/2018 !!!!!!!!!
- 		 * ACTIVIDAD GENERAR NUM ALEATORIOS Y ORDENARLOS ; USANDO METODOS
+ 
+ 		//14/11/2018 -----------------ACTIVIDAD: Usar el método "generarListaAleatorios" y ordenar los números
+ 		 Ejercicios ejercicios= new Ejercicios();
+		ejercicios.ordenarArray();
+ 		 
+
+ 		//14/11/2018 -------------------ACTIVIDAD: Ordenar un array de cadenas  
+ 		Ejercicios ejercicios= new Ejercicios();
+		String palabras[]= {"zorro","azul","abeja","pez"};
+		ejercicios.ordenarCadena(palabras);
+ 		
+ 		
  		
  		//14/11/2018 -------------------ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 
- 		
- 		
- 		
+ 		Ejercicios ejercicios = new Ejercicios();
+		int ordenarArray[]= {40,8,2,1,30};
+		ejercicios.ordenarArray(ordenarArray);
+		System.out.println(Arrays.toString(ordenarArray));
  		
  
  		//08/11/2018 -------------------ACTIVIDAD:Meter en una lista los x números primos 
@@ -588,7 +645,7 @@ public class Ejercicios {
 		Ejercicios ejercicios = new Ejercicios();
 		System.out.println(ejercicios.esPrimo(8));
 		
- 		// 07/11/2018 -------ACTIVIDAD: Realizar un reloj -------
+ 		// 07/11/2018 -------------------ACTIVIDAD: Realizar un reloj -------
  		 Ejercicios ejercicios = new Ejercicios();
 		ejercicios.mostrarReloj();
  
@@ -657,7 +714,7 @@ public class Ejercicios {
 		
  		//---------------------------------ACTIVIDAD:Devolver array con 'n' numeros aleatorios entre 'inferior'(100) y 'superior'(500)
  		 Ejercicios ejercicios = new Ejercicios();
-		ejercicio.gerarListaAleatorios(5,100,500);
+		ejercicio.generarListaAleatorios(5,100,500);
  
  		//17/10/2018 -----------------------ACTIVIDAD: IMPRIME POR CONSOLA n números aleatorios entre 1-100 (ENUNCIADO NUEVO,SIMILAR ANTERIOR)-
  		Ejercicios ejercicios = new Ejercicios();
