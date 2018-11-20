@@ -507,7 +507,7 @@ public class Ejercicios {
 			 * 	devuelve == 0 entonces las dos cadenas son lexicográficamente equivalentes
 			 * 	devuelve> 0, entonces el parámetro pasado al método compareTo es lexicográficamente el primero.
 			 */
-	/*public void ordenarCadena(String[] cadenas ) {
+/*	public void ordenarCadena(String[] cadenas ) {
 		for (int i = 0; i < cadenas.length -1; i++) {
 			for (int j = i+1; j < cadenas.length; j++) {
 				if(cadenas[i].compareTo(cadenas[j]) > 0) {
@@ -517,8 +517,9 @@ public class Ejercicios {
 				}
 			}
 		}
-	}*/
+	}
 			
+*/
 			
 			
 			
@@ -552,12 +553,16 @@ public class Ejercicios {
 			}System.out.println(Arrays.toString(numeros) + " Números aleatorios ordenados");
 		}
 */
-			
-	//---ACTIVIDAD: (Recorrer matriz irregular )Sumar las columnas de un matriz heterogenea o irregular  14/11/2018
 
 			
+			
+			
+	//---ACTIVIDAD: (Recorrer matriz irregular )Sumar las columnas de un matriz heterogenea o irregular  14/11/2018  
+			
+			//¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡HACER ACTIVIDAD!!!!!!!
+			
 		//recorrer matriz irregular	
-	public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
+/*	public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
 		int numColMax=0;
 		for (int i = 0; i < matriz.length; i++) {
 			if(matriz[i].length > numColMax) {
@@ -573,12 +578,97 @@ public class Ejercicios {
 		return resultado;
 		
 	}
+		*/
+	
+			
+			
+			
+			
+			
+			
+			
+			
+	// ---ACTIVIDAD: Invertir elementos de una lista 20/11/2018
+			public void invertirLista(int[] lista) {
+				for (int i = 0; i < lista.length; i++) {
+					for (int j = lista.length -1; j > lista.length / 2; j--) {
+						int numMover = lista[i];
+						lista[i] = lista[j];
+						lista[j] = numMover;
+						i++;
+					}
+				}System.out.println(Arrays.toString(lista));
+			}
+			
+			
+			
+	//--- ACTIVIDAD: Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas) 20/11/2018		
+			
+			public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
+				int contadorl1 = 0;
+				int contadorl2 = 0;
+				int cuantosl1 = l1.length;
+				int cuantosl2 = l2.length;
+				int [] listaMezclada = new int[l1.length + l2.length];
+				
+				
+				if(cuantosl1 < cuantosl2) {
+					for (int i = 1; i <= cuantosl1; i++) {
+						listaMezclada[i] = l1[contadorl1];
+						i++;
+						contadorl1++;
+					}
+					for (int j = 0; j < cuantosl2; j++) {
+						listaMezclada[j] = l2[contadorl2];
+						contadorl2++;
+						j++;
+					}
+				}
+				System.out.println(Arrays.toString(listaMezclada));
+
+				return listaMezclada;
+			}
+			
+
+			
+			
 		
-	
-	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 	public static void main(String[]args) {
 
 		
+		Ejercicios ejercicios = new Ejercicios();
+		int[] lista2 = {1,2,3,4,5};
+		int[] lista1 = {6,7,8};	
+		ejercicios.mezclaListaOrdenadas(lista1, lista2);
+		/*
+		 
+		 *  Act3: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray() . Invertir caracteres de una cadena ( OJO EXAME: método saber si es palíndromo)
+		 */
+		
+		
+		
+		
+		
+		
+		/*
 		
 		int matrizNum[][]= {
 				{5,4,8},
@@ -587,7 +677,7 @@ public class Ejercicios {
 		};		
 		
 		Ejercicios ejercicios = new Ejercicios();
-		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);
+		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);*/
 				
 		
 
@@ -603,10 +693,26 @@ public class Ejercicios {
 		
 		
 /*		
+ 		
+ 		// 20/11/2018 --------------ACTIVIDAD:  Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas)
+ 		 
+ 		 
+ 		 
+ 		 
+ 		 
+ 		 
  
+ 		// 20/11/2018 ---------------ACTIVIDAD: Invertir elementos de una lista 
+	 	Ejercicios ejercicios = new Ejercicios();
+		int lista[]= {40,8,2,1,30};
+		ejercicios.invertirLista(lista);
+		
+
  		//14/11/2018 -----------------ACTIVIDAD: Usar el método "generarListaAleatorios" y ordenar los números
  		 Ejercicios ejercicios= new Ejercicios();
 		ejercicios.ordenarArray();
+		
+		CORREGIR!!!
  		 
 
  		//14/11/2018 -------------------ACTIVIDAD: Ordenar un array de cadenas  
