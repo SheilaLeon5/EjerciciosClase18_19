@@ -585,7 +585,7 @@ public class Ejercicios {
 			
 			
 			
-			
+		//------------------------------ TRES  PEQUEÑOS RETOS -------------------------------------------20/11/2018	
 			
 			
 	// ---ACTIVIDAD: Invertir elementos de una lista 20/11/2018
@@ -597,7 +597,7 @@ public class Ejercicios {
 						lista[j] = numMover;
 						i++;
 					}
-				}System.out.println(Arrays.toString(lista));
+				}System.out.println("Lista mezclada --> " + Arrays.toString(lista));
 			}
 			
 			
@@ -605,67 +605,48 @@ public class Ejercicios {
 	//--- ACTIVIDAD: Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas) 20/11/2018		
 			
 			public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
-				int contadorl1 = 0;
-				int contadorl2 = 0;
-				int cuantosl1 = l1.length;
-				int cuantosl2 = l2.length;
-				int [] listaMezclada = new int[l1.length + l2.length];
-				
-				
-				if(cuantosl1 < cuantosl2) {
-					for (int i = 1; i <= cuantosl1; i++) {
-						listaMezclada[i] = l1[contadorl1];
-						i++;
-						contadorl1++;
-					}
-					for (int j = 0; j < cuantosl2; j++) {
-						listaMezclada[j] = l2[contadorl2];
-						contadorl2++;
-						j++;
-					}
-				}
-				System.out.println(Arrays.toString(listaMezclada));
+				int[] listaUnificada = new int[l1.length+l2.length];
 
-				return listaMezclada;
+				System.arraycopy(l1, 0, listaUnificada, 0,l1.length);
+				System.arraycopy(l2, 0, listaUnificada, l1.length, l2.length);
+				
+				System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
+				invertirLista(listaUnificada);
+				return listaUnificada;
 			}
 			
-
+			/* ---------Método Java .arrayCopy copia arrays------
+			 * Los parámetros que recibe el método Java .arrayCopy son:
+			 * 		- Array origen
+			 * 		- Posición inicial del array origen
+			 * 		- Array destino
+			 * 		- Posición incial en el array de destino
+			 * 		- Numero de elementos a copiar del array origen al array destino
+			 */	
+	
 			
+	//--- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray() 20/11/2018
+			//Invertir caracteres de una cadena ( Extension - hacer método saber si es palíndromo)  
 			
-		
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+			public String invertirCaracteres(String cadena) {
+				
+				char caracter = cadena.charAt(4);
+				for (int i = 0; i < cadena.length(); i++) {
+					char cadenaAux= cadena.charAt(i);
+					// cadena.charAt(i) = cadena.charAt(cadena.length()-1);
+				}
+				System.out.println(cadena);
+				
+				return cadena;	
+			}
+				
 			
 	public static void main(String[]args) {
+		
+		Ejercicios ejercicios= new Ejercicios();
+		String cadena = "Sheila";
+		ejercicios.invertirCaracteres(cadena);
 
-		
-		Ejercicios ejercicios = new Ejercicios();
-		int[] lista2 = {1,2,3,4,5};
-		int[] lista1 = {6,7,8};	
-		ejercicios.mezclaListaOrdenadas(lista1, lista2);
-		/*
-		 
-		 *  Act3: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray() . Invertir caracteres de una cadena ( OJO EXAME: método saber si es palíndromo)
-		 */
-		
-		
-		
-		
 		
 		
 		/*
@@ -693,13 +674,16 @@ public class Ejercicios {
 		
 		
 /*		
+ 		// 20/11/2018 ------------- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray()
+ 		
+ 		
+ 		
  		
  		// 20/11/2018 --------------ACTIVIDAD:  Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas)
- 		 
- 		 
- 		 
- 		 
- 		 
+		Ejercicios ejercicios = new Ejercicios();
+		int[] lista2 = {1,2,3,4,5};
+		int[] lista1 = {6,7,8};	
+		ejercicios.mezclaListaOrdenadas(lista1, lista2);
  		 
  
  		// 20/11/2018 ---------------ACTIVIDAD: Invertir elementos de una lista 
@@ -719,7 +703,6 @@ public class Ejercicios {
  		Ejercicios ejercicios= new Ejercicios();
 		String palabras[]= {"zorro","azul","abeja","pez"};
 		ejercicios.ordenarCadena(palabras);
- 		
  		
  		
  		//14/11/2018 -------------------ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 
