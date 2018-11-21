@@ -487,6 +487,8 @@ public class Ejercicios {
 	
 	//---ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 14/11/2018
 /*	
+ * 
+ */
 		public void ordenarArray(int[] numeros) {
 			for (int i = 0; i < numeros.length -1; i++) {
 				for (int j = i+1; j < numeros.length; j++) {
@@ -498,7 +500,7 @@ public class Ejercicios {
 				}
 			}
 		}			
-*/
+
 			
 	//---ACTIVIDAD: Ordenar un array de cadenas  14/11/2018
 			/* 	
@@ -538,6 +540,7 @@ public class Ejercicios {
 					}
 					return numero;
 				}	
+
 			
 		public void ordenarArray() {
 			int[] numeros =generarListaAleatorios(5, 1, 40);
@@ -552,7 +555,7 @@ public class Ejercicios {
 				}
 			}System.out.println(Arrays.toString(numeros) + " Números aleatorios ordenados");
 		}
-*/
+
 
 			
 			
@@ -589,7 +592,7 @@ public class Ejercicios {
 			
 			
 	// ---ACTIVIDAD: Invertir elementos de una lista 20/11/2018
-			public void invertirLista(int[] lista) {
+			/*public void invertirLista(int[] lista) {
 				for (int i = 0; i < lista.length; i++) {
 					for (int j = lista.length -1; j > lista.length / 2; j--) {
 						int numMover = lista[i];
@@ -597,39 +600,45 @@ public class Ejercicios {
 						lista[j] = numMover;
 						i++;
 					}
-				}System.out.println("Lista mezclada --> " + Arrays.toString(lista));
+					
+					
+				}	
+				System.out.println("Lista mezclada --> " + Arrays.toString(lista));
 			}
-			
+			*/
 			
 			
 	//--- ACTIVIDAD: Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas) 20/11/2018		
 			
-			public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
+		/*	public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
 				int[] listaUnificada = new int[l1.length+l2.length];
 
-				System.arraycopy(l1, 0, listaUnificada, 0,l1.length);
-				System.arraycopy(l2, 0, listaUnificada, l1.length, l2.length);
+				for (int i = 0; i < l1.length; i++) {
+					listaUnificada[i] = l1[i]; 
+				}
 				
-				System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
-				invertirLista(listaUnificada);
+				for (int j = 0; j < l2.length; j++) {
+					listaUnificada[l1.length -1] = l2[j];
+				}
+				
+				
+			System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
+				//invertirLista(listaUnificada);
+				
 				return listaUnificada;
-			}
+				
+			}*/
 			
-			/* ---------Método Java .arrayCopy copia arrays------
-			 * Los parámetros que recibe el método Java .arrayCopy son:
-			 * 		- Array origen
-			 * 		- Posición inicial del array origen
-			 * 		- Array destino
-			 * 		- Posición incial en el array de destino
-			 * 		- Numero de elementos a copiar del array origen al array destino
-			 */	
+			
 	
+			
+			
 			
 	//--- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray() 20/11/2018
 			//Invertir caracteres de una cadena ( Extension - hacer método saber si es palíndromo)  
 			
 			
-			public String invertirCaracteres(String cadena) {
+			/*public String invertirCaracteres(String cadena) {
 				String cadenaAlReves = new String();
 				
 				for (int i = cadena.length()- 1; i >= 0; i--) {
@@ -639,18 +648,46 @@ public class Ejercicios {
 				System.out.println(cadenaAlReves);
 				
 				return cadenaAlReves;
-			}
+			}*/
 				
+			
+			
+			
+			
+	// --- ACTIVIDAD: Ordenar cada matriz del array (usando el método ordenarArray) 21/11/2018		
+			
+			public void ordenaFilaMatriz (int[][] matriz) {
+				for (int i = 0; i < matriz.length; i++) {
+					this.ordenarArray(matriz[i]);
+					System.out.println();
+				}
+			}
+			
+			
+			public int[] matrizToArrayOrdenado(int[][] matriz) {
+				//Implementación
+
+				return null;
+			}
+			
+			
+			
 			
 	public static void main(String[]args) {
 		
-		
 		Ejercicios ejercicios = new Ejercicios();
-		int[] lista2 = {1,2,3,4,5};
-		int[] lista1 = {6,7,8};	
-		ejercicios.mezclaListaOrdenadas(lista1, lista2);
+		int matrizNum[][]= {
+				{7,4,6},
+				{6},
+				{5,2,3},
+				{4,2,5,1,9,0,3},
+				{5,6,1,3}
+		};
 		
-	
+		ejercicios.ordenaFilaMatriz(matrizNum);
+		
+		
+		
 		
 		
 		/*
@@ -678,6 +715,11 @@ public class Ejercicios {
 		
 		
 /*		
+  		//20/11/2018 -------------ACTIVIDAD: 
+  		 
+  		 
+  		 
+ 
  		// 20/11/2018 ------------- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray()
  		Ejercicios ejercicios= new Ejercicios();
 		String cadena = "Sheila";
