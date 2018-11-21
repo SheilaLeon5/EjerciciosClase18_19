@@ -628,25 +628,29 @@ public class Ejercicios {
 	//--- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray() 20/11/2018
 			//Invertir caracteres de una cadena ( Extension - hacer método saber si es palíndromo)  
 			
+			
 			public String invertirCaracteres(String cadena) {
+				String cadenaAlReves = new String();
 				
-				char caracter = cadena.charAt(4);
-				for (int i = 0; i < cadena.length(); i++) {
-					char cadenaAux= cadena.charAt(i);
-					// cadena.charAt(i) = cadena.charAt(cadena.length()-1);
+				for (int i = cadena.length()- 1; i >= 0; i--) {
+					 cadenaAlReves += cadena.charAt(i);
 				}
-				System.out.println(cadena);
 				
-				return cadena;	
+				System.out.println(cadenaAlReves);
+				
+				return cadenaAlReves;
 			}
 				
 			
 	public static void main(String[]args) {
 		
-		Ejercicios ejercicios= new Ejercicios();
-		String cadena = "Sheila";
-		ejercicios.invertirCaracteres(cadena);
-
+		
+		Ejercicios ejercicios = new Ejercicios();
+		int[] lista2 = {1,2,3,4,5};
+		int[] lista1 = {6,7,8};	
+		ejercicios.mezclaListaOrdenadas(lista1, lista2);
+		
+	
 		
 		
 		/*
@@ -675,7 +679,9 @@ public class Ejercicios {
 		
 /*		
  		// 20/11/2018 ------------- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray()
- 		
+ 		Ejercicios ejercicios= new Ejercicios();
+		String cadena = "Sheila";
+		ejercicios.invertirCaracteres(cadena);
  		
  		
  		
