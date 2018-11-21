@@ -486,9 +486,7 @@ public class Ejercicios {
 	
 	
 	//---ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 14/11/2018
-/*	
- * 
- */
+
 		public void ordenarArray(int[] numeros) {
 			for (int i = 0; i < numeros.length -1; i++) {
 				for (int j = i+1; j < numeros.length; j++) {
@@ -501,6 +499,7 @@ public class Ejercicios {
 			}
 		}			
 
+		
 			
 	//---ACTIVIDAD: Ordenar un array de cadenas  14/11/2018
 			/* 	
@@ -522,8 +521,6 @@ public class Ejercicios {
 	}
 			
 */
-			
-			
 			
 			
 	//---ACTIVIDAD: Usar el método "generarListaAleatorios" y ordenar los numeros	14/11/2018 	
@@ -584,30 +581,29 @@ public class Ejercicios {
 		*/
 	
 			
-			
-			
-			
-			
+
 		//------------------------------ TRES  PEQUEÑOS RETOS -------------------------------------------20/11/2018	
 			
 			
 	// ---ACTIVIDAD: Invertir elementos de una lista 20/11/2018
 			public void invertirLista(int[] lista) {
-				for (int i = lista.length -1; i > lista.length / 2; i--) {
-					int numMover = lista[i];
-					lista[i] = lista.length -i;
-					lista[lista.length -i] = numMover;
+				int numMover;
+				for (int i = 0; i < lista.length / 2; i++) {
+					numMover = lista[i];
+					lista[i] = lista[lista.length -1 -i];
+					lista[lista.length -1 -i] = numMover;
 				}
-
 				System.out.println("Lista mezclada --> " + Arrays.toString(lista));
-				System.out.println(lista.length/2);
 			}
 			
 			
 			
 	//--- ACTIVIDAD: Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas) 20/11/2018		
-			
+			// En esta actividad hemos llamado al método "ordenarArray".
 			public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
+				ordenarArray(l1);
+				ordenarArray(l2);
+				
 				int[] listaUnificada = new int[l1.length+l2.length];
 
 				for (int i = 0; i < l1.length; i++) {
@@ -621,10 +617,6 @@ public class Ejercicios {
 			invertirLista(listaUnificada);
 			return listaUnificada;	
 			}
-			
-			
-/*			int[] lista2 = {1,2,3,4,5};
-			int[] lista1 = {6,7,8};	*/
 			
 			
 			
@@ -650,10 +642,10 @@ public class Ejercicios {
 			
 	// --- ACTIVIDAD: Ordenar cada matriz del array (usando el método ordenarArray) 21/11/2018		
 			
-	/*		public void ordenaFilaMatriz (int[][] matriz) {
+			public void ordenaFilaMatriz (int[][] matriz) {
 				for (int i = 0; i < matriz.length; i++) {
 					this.ordenarArray(matriz[i]);
-					System.out.println();
+					System.out.println(Arrays.toString(matriz[i]));
 				}
 			}
 			
@@ -665,25 +657,15 @@ public class Ejercicios {
 			}
 			
 			
-			*/
 			
 	public static void main(String[]args) {
 		
+
+		
+		
+		
+		
 		Ejercicios ejercicios = new Ejercicios();
-		int[] lista1 = {1,2,3,4,5};
-		int[] lista2 = {6,7,8};	
-		ejercicios.mezclaListaOrdenadas(lista1, lista2);
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*Ejercicios ejercicios = new Ejercicios();
 		int matrizNum[][]= {
 				{7,4,6},
 				{6},
@@ -692,7 +674,7 @@ public class Ejercicios {
 				{5,6,1,3}
 		};
 		
-		ejercicios.ordenaFilaMatriz(matrizNum);*/
+		ejercicios.ordenaFilaMatriz(matrizNum);
 		
 		
 		
@@ -737,8 +719,8 @@ public class Ejercicios {
  		
  		// 20/11/2018 --------------ACTIVIDAD:  Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas)
 		Ejercicios ejercicios = new Ejercicios();
-		int[] lista2 = {1,2,3,4,5};
-		int[] lista1 = {6,7,8};	
+		int[] lista2 = {1,3,2,5,4};
+		int[] lista1 = {8,7,6};	
 		ejercicios.mezclaListaOrdenadas(lista1, lista2);
  		 
  
