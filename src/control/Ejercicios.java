@@ -592,25 +592,22 @@ public class Ejercicios {
 			
 			
 	// ---ACTIVIDAD: Invertir elementos de una lista 20/11/2018
-			/*public void invertirLista(int[] lista) {
-				for (int i = 0; i < lista.length; i++) {
-					for (int j = lista.length -1; j > lista.length / 2; j--) {
-						int numMover = lista[i];
-						lista[i] = lista[j];
-						lista[j] = numMover;
-						i++;
-					}
-					
-					
-				}	
+			public void invertirLista(int[] lista) {
+				for (int i = lista.length -1; i > lista.length / 2; i--) {
+					int numMover = lista[i];
+					lista[i] = lista.length -i;
+					lista[lista.length -i] = numMover;
+				}
+
 				System.out.println("Lista mezclada --> " + Arrays.toString(lista));
+				System.out.println(lista.length/2);
 			}
-			*/
+			
 			
 			
 	//--- ACTIVIDAD: Dadas dos listas PREVIAMENTE ORDENADAS, se pide obtener la lista MEZCLADA de ambas .(Mezclar listas) 20/11/2018		
 			
-		/*	public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
+			public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
 				int[] listaUnificada = new int[l1.length+l2.length];
 
 				for (int i = 0; i < l1.length; i++) {
@@ -618,19 +615,16 @@ public class Ejercicios {
 				}
 				
 				for (int j = 0; j < l2.length; j++) {
-					listaUnificada[l1.length -1] = l2[j];
+					listaUnificada[l1.length +j] = l2[j];
 				}
-				
-				
 			System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
-				//invertirLista(listaUnificada);
-				
-				return listaUnificada;
-				
-			}*/
+			invertirLista(listaUnificada);
+			return listaUnificada;	
+			}
 			
 			
-	
+/*			int[] lista2 = {1,2,3,4,5};
+			int[] lista1 = {6,7,8};	*/
 			
 			
 			
@@ -656,7 +650,7 @@ public class Ejercicios {
 			
 	// --- ACTIVIDAD: Ordenar cada matriz del array (usando el método ordenarArray) 21/11/2018		
 			
-			public void ordenaFilaMatriz (int[][] matriz) {
+	/*		public void ordenaFilaMatriz (int[][] matriz) {
 				for (int i = 0; i < matriz.length; i++) {
 					this.ordenarArray(matriz[i]);
 					System.out.println();
@@ -671,11 +665,25 @@ public class Ejercicios {
 			}
 			
 			
-			
+			*/
 			
 	public static void main(String[]args) {
 		
 		Ejercicios ejercicios = new Ejercicios();
+		int[] lista1 = {1,2,3,4,5};
+		int[] lista2 = {6,7,8};	
+		ejercicios.mezclaListaOrdenadas(lista1, lista2);
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*Ejercicios ejercicios = new Ejercicios();
 		int matrizNum[][]= {
 				{7,4,6},
 				{6},
@@ -684,7 +692,7 @@ public class Ejercicios {
 				{5,6,1,3}
 		};
 		
-		ejercicios.ordenaFilaMatriz(matrizNum);
+		ejercicios.ordenaFilaMatriz(matrizNum);*/
 		
 		
 		
