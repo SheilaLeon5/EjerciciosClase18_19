@@ -613,6 +613,8 @@ public class Ejercicios {
 				for (int j = 0; j < l2.length; j++) {
 					listaUnificada[l1.length +j] = l2[j];
 				}
+				
+			ordenarArray(listaUnificada);
 			System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
 			invertirLista(listaUnificada);
 			return listaUnificada;	
@@ -649,22 +651,25 @@ public class Ejercicios {
 				}
 			}
 			
-			
+	// --- ACTIVIDAD: Una vez ordenado cada arrays de la matriz ahora hay que ORDENAR TODA la matriz comparando con los array  22/11/2018
 			public int[] matrizToArrayOrdenado(int[][] matriz) {
-				//Implementación
+				
+				ordenaFilaMatriz(matriz);
+				for (int i = 0; i < matriz.length; i++) {
+					//int resultado[i] = matriz[i]; 
+					//System.out.println("prueba" + Arrays.toString(resultado));
+				}
 
+				
+				
+				
 				return null;
 			}
-			
+		
 			
 			
 	public static void main(String[]args) {
-		
-
-		
-		
-		
-		
+	
 		Ejercicios ejercicios = new Ejercicios();
 		int matrizNum[][]= {
 				{7,4,6},
@@ -674,7 +679,7 @@ public class Ejercicios {
 				{5,6,1,3}
 		};
 		
-		ejercicios.ordenaFilaMatriz(matrizNum);
+		ejercicios.matrizToArrayOrdenado(matrizNum);
 		
 		
 		
@@ -704,9 +709,25 @@ public class Ejercicios {
 		
 		
 		
-/*		
-  		//20/11/2018 -------------ACTIVIDAD: 
-  		 
+/*	
+ 		// 22/11/2018 ----------- ACTIVIDAD: Una vez ordenado cada arrays de la matriz ahora hay que ORDENAR TODA la matriz comparando con los array 
+ 		
+ 
+ 
+ 
+ 
+ 
+  		//20/11/2018 -------------ACTIVIDAD: ACTIVIDAD: Ordenar cada matriz del array (usando el método ordenarArray) 21/11/2018
+  		 Ejercicios ejercicios = new Ejercicios();
+		int matrizNum[][]= {
+				{7,4,6},
+				{6},
+				{5,2,3},
+				{4,2,5,1,9,0,3},
+				{5,6,1,3}
+		};
+		
+		ejercicios.ordenaFilaMatriz(matrizNum);
   		 
   		 
  
