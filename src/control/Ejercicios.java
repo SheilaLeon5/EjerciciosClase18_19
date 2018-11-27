@@ -593,7 +593,7 @@ public class Ejercicios {
 					lista[i] = lista[lista.length -1 -i];
 					lista[lista.length -1 -i] = numMover;
 				}
-				System.out.println("Lista mezclada --> " + Arrays.toString(lista));
+				//System.out.println("Lista mezclada --> " + Arrays.toString(lista));
 			}
 			
 			
@@ -604,6 +604,7 @@ public class Ejercicios {
 				ordenarArray(l1);
 				ordenarArray(l2);
 				
+				// Une listas
 				int[] listaUnificada = new int[l1.length+l2.length];
 
 				for (int i = 0; i < l1.length; i++) {
@@ -615,7 +616,7 @@ public class Ejercicios {
 				}
 				
 			ordenarArray(listaUnificada);
-			System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
+			//System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
 			invertirLista(listaUnificada);
 			return listaUnificada;	
 			}
@@ -653,17 +654,13 @@ public class Ejercicios {
 			
 	// --- ACTIVIDAD: Una vez ordenado cada arrays de la matriz ahora hay que ORDENAR TODA la matriz comparando con los array  22/11/2018
 			public int[] matrizToArrayOrdenado(int[][] matriz) {
-				
+				int [] resultado = new int[1];
 				ordenaFilaMatriz(matriz);
 				for (int i = 0; i < matriz.length; i++) {
-					//int resultado[i] = matriz[i]; 
-					//System.out.println("prueba" + Arrays.toString(resultado));
+					resultado = matriz[i];
+					resultado  = mezclaListaOrdenadas(matriz[i], resultado);
 				}
-
-				
-				
-				
-				return null;
+				return resultado;
 			}
 		
 			
@@ -679,7 +676,7 @@ public class Ejercicios {
 				{5,6,1,3}
 		};
 		
-		ejercicios.matrizToArrayOrdenado(matrizNum);
+		int[] vector = ejercicios.matrizToArrayOrdenado(matrizNum);
 		
 		
 		
@@ -711,8 +708,17 @@ public class Ejercicios {
 		
 /*	
  		// 22/11/2018 ----------- ACTIVIDAD: Una vez ordenado cada arrays de la matriz ahora hay que ORDENAR TODA la matriz comparando con los array 
- 		
- 
+ 		Ejercicios ejercicios = new Ejercicios();
+		int matrizNum[][]= {
+				{7,4,6},
+				{6},
+				{5,2,3},
+				{4,2,5,1,9,0,3},
+				{5,6,1,3}
+		};
+		ejercicios.matrizToArrayOrdenado(matrizNum);
+		
+		//OJO: Esta actividad hay que comprobarla con el debug porque solo retorna el resultado, no muestro por pantalla
  
  
  
