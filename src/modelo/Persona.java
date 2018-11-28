@@ -12,7 +12,7 @@ public class Persona {
 	 private Persona [] hijosBiologicos;  // 2.- En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene    28/11/2018
 	 
 	 
-	 public Persona() {
+	public Persona() {
 		super();
 		this.nif = "12345678F";
 		this.nombre="Anónimo";
@@ -75,4 +75,14 @@ public class Persona {
 	public void setFecha_nac(LocalDate fecha_nac) {
 		this.fecha_nac = fecha_nac;
 	}
+	
+	 public Persona[] getHijosBiologicos() {
+			return hijosBiologicos;
+		}
+
+	public void setHijosBiologicos(Persona[] hijosBiologicos) {
+		this.hijosBiologicos = hijosBiologicos;
+	}
+
+	
 }

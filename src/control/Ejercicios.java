@@ -703,6 +703,28 @@ public class Ejercicios {
 		
 			private Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
 			
+			public void hijosPersona() {
+				//personas[0].getHijosBiologicos(); //accedemos a una persona concreta y muestra sus hijos
+				
+				for (int i = 0; i < personas.length; i++) {
+					Persona[] hijos = personas[i].getHijosBiologicos();
+					System.out.println("Progenitor ->" + personas[i].getNombre());
+					if (hijos != null) {
+						for (int j = 0; j < hijos.length; j++) {
+							System.out.println("Hij@s --> " + hijos[j].getNombre());
+						}
+					}
+				}
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
