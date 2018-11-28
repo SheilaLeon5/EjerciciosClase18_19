@@ -708,6 +708,10 @@ public class Ejercicios {
 				
 				for (int i = 0; i < personas.length; i++) {
 					Persona[] hijos = personas[i].getHijosBiologicos();
+					Persona padre = personas[i].getPadre();
+					Persona madre = personas[i].getMadre();
+					
+					System.out.println("El padre de "+ personas[i].getNombre() + ": " + padre + ". La madre de" + personas[i].getNombre() + ":" + madre);
 					System.out.println("Progenitor ->" + personas[i].getNombre());
 					if (hijos != null) {
 						for (int j = 0; j < hijos.length; j++) {

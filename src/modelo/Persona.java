@@ -6,12 +6,14 @@ import java.util.Random;
 public class Persona {
 	
 	private String nif;
-	 private String nombre;
-	 private int longitudPaso;
-	 private LocalDate fecha_nac; // Clase "LocalDate" manejar fechas
-	 private Persona [] hijosBiologicos;  // 2.- En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene    28/11/2018
-	 
-	 
+	private String nombre;
+	private int longitudPaso;
+	private LocalDate fecha_nac; // Clase "LocalDate" manejar fechas
+	private char sexo; // 'M' 'F'
+	private Persona [] hijosBiologicos;  // 2.- En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene    28/11/2018
+	private Persona padre;
+	private Persona madre;
+
 	public Persona() {
 		super();
 		this.nif = "12345678F";
@@ -21,12 +23,13 @@ public class Persona {
 		
 	}
 
-	public Persona(String nif, String nombre, int longitudPaso, LocalDate fecha_nac) {
+	public Persona(String nif, String nombre, int longitudPaso, LocalDate fecha_nac , char sexo) {
 		super();
 		this.nif = nif;
 		this.nombre = nombre;
 		this.longitudPaso = longitudPaso;
 		this.fecha_nac = null;
+		this.sexo = sexo;
 	}
 
 	
@@ -76,13 +79,36 @@ public class Persona {
 		this.fecha_nac = fecha_nac;
 	}
 	
-	 public Persona[] getHijosBiologicos() {
+	public char getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
+
+	public Persona[] getHijosBiologicos() {
 			return hijosBiologicos;
-		}
+	}
 
 	public void setHijosBiologicos(Persona[] hijosBiologicos) {
 		this.hijosBiologicos = hijosBiologicos;
 	}
 
+	public Persona getPadre() {
+		return padre;
+	}
+
+	public void setPadre(Persona padre) {
+		this.padre = padre;
+	}
+
+	public Persona getMadre() {
+		return madre;
+	}
+
+	public void setMadre(Persona madre) {
+		this.madre = madre;
+	}
 	
 }
