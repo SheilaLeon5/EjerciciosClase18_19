@@ -15,7 +15,6 @@ public class Persona {
 	private Persona madre;
 
 	public Persona() {
-		super();
 		this.nif = "12345678F";
 		this.nombre="Anónimo";
 		this.fecha_nac=LocalDate.now();
@@ -23,16 +22,14 @@ public class Persona {
 		
 	}
 
-	public Persona(String nif, String nombre, int longitudPaso, LocalDate fecha_nac , char sexo ,  Persona [] hijosBiologicos , Persona padre , Persona madre ) {
-		super();
+	public Persona(String nif, String nombre, int longitudPaso, LocalDate fecha_nac , char sexo , Persona [] hijosBiologicos ) {
 		this.nif = nif;
 		this.nombre = nombre;
 		this.longitudPaso = longitudPaso;
 		this.fecha_nac = null;
 		this.sexo = sexo;
 		this.hijosBiologicos = hijosBiologicos;
-		this.padre = padre;
-		this.madre = madre;
+
 	}
 
 	

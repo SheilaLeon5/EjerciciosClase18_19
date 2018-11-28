@@ -701,7 +701,7 @@ public class Ejercicios {
 		2) En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene			
 	*/		
 		
-			private Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
+			public Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
 			
 			public void hijosPersona() {
 				//personas[0].getHijosBiologicos(); //accedemos a una persona concreta y muestra sus hijos
@@ -711,7 +711,7 @@ public class Ejercicios {
 					Persona padre = personas[i].getPadre();
 					Persona madre = personas[i].getMadre();
 					
-					System.out.println("El padre de "+ personas[i].getNombre() + ": " + padre + ". La madre de" + personas[i].getNombre() + ":" + madre);
+					System.out.println("El padre de "+ personas[i].getNombre() + ": " + padre + ". La madre de" + personas[i].getNombre() + ":" + madre.getNombre());
 					System.out.println("Progenitor ->" + personas[i].getNombre());
 					if (hijos != null) {
 						for (int j = 0; j < hijos.length; j++) {
@@ -728,10 +728,27 @@ public class Ejercicios {
 			
 	public static void main(String[]args) {
 		
+
+		//Crear sheila
+		Persona Sheila = new Persona("78474714","Sheila", 50, null, 'F', new Persona[0]);
 		
-		//Persona Orlando = new Persona(45454545,"Orlando",33,null,"M",hijosBiologicos,"Pepe","Concha");
+		//Crear cindy
+		Persona Cindy = new Persona("78474718","Cindy", 55, null, 'F', new Persona[0]);
+
+		Persona[] hijos = {Sheila , Cindy};
 		
-		//Persona[] hijosBiologicos = {"Sheila","Cindy"};
+		Persona Orlando = new Persona("45454545","Orlando",33, null,'M',hijos );
+		Persona Toni = new Persona("45664545","Toni",33,null,'F' , hijos);
+		
+		Orlando.setMadre(Toni);
+				
+		Ejercicios ejercicio = new Ejercicios();
+		Persona [] kaka = {Orlando};
+		ejercicio.personas = kaka;
+		ejercicio.hijosPersona();
+		
+		
+			
 		
 		
 	
