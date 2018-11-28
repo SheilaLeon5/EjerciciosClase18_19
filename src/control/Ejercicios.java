@@ -722,11 +722,7 @@ public class Ejercicios {
 				}
 				
 			}
-			
-			
-			
-			
-			
+
 	public static void main(String[]args) {
 		
 
@@ -741,11 +737,15 @@ public class Ejercicios {
 		
 		Persona toni = new Persona("45664545","Toni",33,null,'F' , hijos);
 		
+		sheila.setMadre(toni);
+		sheila.setPadre(orlando);
+		
 		orlando.setMadre(concha);
 		orlando.setPadre(pepe);
-				
+		
+		
 		Ejercicios ejercicio = new Ejercicios();
-		Persona [] resultado = {orlando};
+		Persona [] resultado = {sheila,orlando};
 		ejercicio.personas = resultado;
 		ejercicio.hijosPersona();
 		
@@ -807,6 +807,8 @@ public class Ejercicios {
 		Persona concha = new Persona("45999945","Concha",77,null,'F' , new Persona[3]);
 		
 		Persona toni = new Persona("45664545","Toni",33,null,'F' , hijos);
+		sheila.setMadre(toni);
+		sheila.setPadre(orlando);
 		
 		orlando.setMadre(concha);
 		orlando.setPadre(pepe);
