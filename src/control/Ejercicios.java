@@ -227,7 +227,7 @@ public class Ejercicios {
 			  	 - devolver array
 			  */
 			 					
-			public  int[] generaAleatorio (int n) {
+/*			public  int[] generaAleatorio (int n) {
 				Random rnd = new Random();
 				int [] resultado= new int[n];   	//Declaración e Inicialización del array
 				for (int i = 0; i < n; i++) {      //Recorrer el array. Siendo 'n' la variable que nos determina el tamaño del array 'resultado'	
@@ -238,7 +238,7 @@ public class Ejercicios {
 					}
 				}
 					return resultado;
-			}
+			}*/
 
 /*			
 			
@@ -617,11 +617,43 @@ public class Ejercicios {
 				
 			ordenarArray(listaUnificada);
 			//System.out.println( "Lista unificada --> " + Arrays.toString(listaUnificada));
-			invertirLista(listaUnificada);
+			//invertirLista(listaUnificada);
 			return listaUnificada;	
 			}
 			
 			
+/*			
+ * 				--- ACTIVIDAD DEL PROFESOR
+ * 				public int[] mezclaListaOrdenadas(int[] l1, int[] l2) {
+
+				int[] resultado = new int[l1.length + l2.length];
+				int i = 0;
+				int j = 0;
+				int k = 0;
+
+				while (k < l1.length + l2.length) {
+					// while (i < l1.length || j < l2.length) {
+					try {
+						if (l1[i] < l2[j]) {
+							resultado[k] = l1[i];
+							i++;
+						} else {
+							resultado[k] = l2[j];
+							j++;
+						}
+						k++;
+					} catch (ArrayIndexOutOfBoundsException e) {
+						if (i == l1.length) // fin de l1..
+							l1[--i] = Integer.MAX_VALUE;
+						else
+							l2[--j] = Integer.MAX_VALUE;
+					}
+				}
+				return resultado;
+
+			}	*/		
+			
+	
 			
 	//--- ACTIVIDAD: Dada una cadena, obtener la cadena INVIRTIENDO sus caracteres(usar charAt() o toCharArray() 20/11/2018
 			//Invertir caracteres de una cadena ( Extension - hacer método saber si es palíndromo)  
@@ -643,7 +675,7 @@ public class Ejercicios {
 			
 			
 			
-	// --- ACTIVIDAD: Ordenar cada matriz del array (usando el método ordenarArray) 21/11/2018		
+	// --- ACTIVIDAD: Ordenar cada array de la matriz (usando el método ordenarArray) 21/11/2018		
 			
 			public void ordenaFilaMatriz (int[][] matriz) {
 				for (int i = 0; i < matriz.length; i++) {
@@ -663,6 +695,15 @@ public class Ejercicios {
 				return resultado;
 			}
 		
+	
+	/* 	----------- EJERCICIOS ----------------------	28/11/2018 
+		1) Declarar en la clase "Ejercicios" un array de persona
+		2) En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene			
+	*/		
+		
+			Persona [] Pepa;          //1.- Declarar en la clase "Ejercicios" un array de persona
+			
+			
 			
 			
 	public static void main(String[]args) {
@@ -678,9 +719,8 @@ public class Ejercicios {
 		
 		int[] vector = ejercicios.matrizToArrayOrdenado(matrizNum);
 		
-		
-		
-		
+
+
 		
 		/*
 		
