@@ -726,13 +726,14 @@ public class Ejercicios {
 			
 			
 			
-			
-			
-			
-			
-			
-			
 	public static void main(String[]args) {
+		
+		
+		//Persona Orlando = new Persona(45454545,"Orlando",33,null,"M",hijosBiologicos,"Pepe","Concha");
+		
+		//Persona[] hijosBiologicos = {"Sheila","Cindy"};
+		
+		
 	
 /*		Ejercicios ejercicios = new Ejercicios();
 		int matrizNum[][]= {
