@@ -696,19 +696,19 @@ public class Ejercicios {
 			}
 		
 	
-	/* 	----------- EJERCICIOS ----------------------	28/11/2018 
-		1) Declarar en la clase "Ejercicios" un array de persona
+	/* 	--------------------------------------- EJERCICIOS -----------------------------------------	28/11/2018 
+		1) Declarar en la clase "Ejercicios" un array de personas
 		2) En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene			
 	*/		
 		
-			Persona [] Pepa;          //1.- Declarar en la clase "Ejercicios" un array de persona
+			private Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
 			
 			
 			
 			
 	public static void main(String[]args) {
 	
-		Ejercicios ejercicios = new Ejercicios();
+/*		Ejercicios ejercicios = new Ejercicios();
 		int matrizNum[][]= {
 				{7,4,6},
 				{6},
@@ -719,8 +719,12 @@ public class Ejercicios {
 		
 		int[] vector = ejercicios.matrizToArrayOrdenado(matrizNum);
 		
+*/
 
-
+		
+		
+		
+		
 		
 		/*
 		

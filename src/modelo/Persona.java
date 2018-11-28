@@ -4,11 +4,12 @@ import java.time.LocalDate;
 import java.util.Random;
 
 public class Persona {
+	
 	private String nif;
 	 private String nombre;
 	 private int longitudPaso;
 	 private LocalDate fecha_nac; // Clase "LocalDate" manejar fechas
-	 
+	 private Persona [] hijosBiologicos;  // 2.- En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene    28/11/2018
 	 
 	 
 	 public Persona() {
