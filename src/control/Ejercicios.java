@@ -700,7 +700,8 @@ public class Ejercicios {
 		1) Declarar en la clase "Ejercicios" un array de personas
 		2) En la clase "Persona" declara un array de "Persona" que representa los hijos biológicos que tiene			
 	*/		
-		
+			
+			//----------ACTIVIDAD: Mostrar nombre progenitor sus padres y sus hijos-------------------------
 			public Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
 			
 			public void hijosPersona() {
@@ -711,8 +712,8 @@ public class Ejercicios {
 					Persona padre = personas[i].getPadre();
 					Persona madre = personas[i].getMadre();
 					
-					System.out.println("El padre de "+ personas[i].getNombre() + ": " + padre + ". La madre de" + personas[i].getNombre() + ":" + madre.getNombre());
-					System.out.println("Progenitor ->" + personas[i].getNombre());
+					System.out.println("El padre de "+ personas[i].getNombre() + ": " + padre.getNombre() + ". La madre de " + personas[i].getNombre() + ":" + madre.getNombre());
+					System.out.println("Progenitor -> " + personas[i].getNombre());
 					if (hijos != null) {
 						for (int j = 0; j < hijos.length; j++) {
 							System.out.println("Hij@s --> " + hijos[j].getNombre());
@@ -729,22 +730,23 @@ public class Ejercicios {
 	public static void main(String[]args) {
 		
 
-		//Crear sheila
-		Persona Sheila = new Persona("78474714","Sheila", 50, null, 'F', new Persona[0]);
 		
-		//Crear cindy
-		Persona Cindy = new Persona("78474718","Cindy", 55, null, 'F', new Persona[0]);
-
-		Persona[] hijos = {Sheila , Cindy};
+		Persona sheila = new Persona("78474714","Sheila", 50, null, 'F', new Persona[0]);  //Crear sheila
+		Persona cindy = new Persona("78474718","Cindy", 55, null, 'F', new Persona[0]);   //Crear cindy
+		Persona[] hijos = {sheila , cindy};
 		
-		Persona Orlando = new Persona("45454545","Orlando",33, null,'M',hijos );
-		Persona Toni = new Persona("45664545","Toni",33,null,'F' , hijos);
+		Persona orlando = new Persona("45454545","Orlando",33, null,'M',hijos );
+		Persona pepe = new Persona("48888845","Pepe",38,null,'M' , new Persona[3]);
+		Persona concha = new Persona("45999945","Concha",77,null,'F' , new Persona[3]);
 		
-		Orlando.setMadre(Toni);
+		Persona toni = new Persona("45664545","Toni",33,null,'F' , hijos);
+		
+		orlando.setMadre(concha);
+		orlando.setPadre(pepe);
 				
 		Ejercicios ejercicio = new Ejercicios();
-		Persona [] kaka = {Orlando};
-		ejercicio.personas = kaka;
+		Persona [] resultado = {orlando};
+		ejercicio.personas = resultado;
 		ejercicio.hijosPersona();
 		
 		
@@ -795,6 +797,27 @@ public class Ejercicios {
 		
 		
 /*	
+ 		//28/11/2018 ------------ACTIVIDAD: Mostrar nombre progenitor sus padres y sus hijos. 
+ 		Persona sheila = new Persona("78474714","Sheila", 50, null, 'F', new Persona[0]);  //Crear sheila
+		Persona cindy = new Persona("78474718","Cindy", 55, null, 'F', new Persona[0]);   //Crear cindy
+		Persona[] hijos = {sheila , cindy};
+		
+		Persona orlando = new Persona("45454545","Orlando",33, null,'M',hijos );
+		Persona pepe = new Persona("48888845","Pepe",38,null,'M' , new Persona[3]);
+		Persona concha = new Persona("45999945","Concha",77,null,'F' , new Persona[3]);
+		
+		Persona toni = new Persona("45664545","Toni",33,null,'F' , hijos);
+		
+		orlando.setMadre(concha);
+		orlando.setPadre(pepe);
+				
+		Ejercicios ejercicio = new Ejercicios();
+		Persona [] resultado = {orlando};
+		ejercicio.personas = resultado;
+		ejercicio.hijosPersona();
+ 		 
+ 		 
+ 
  		// 22/11/2018 ----------- ACTIVIDAD: Una vez ordenado cada arrays de la matriz ahora hay que ORDENAR TODA la matriz comparando con los array 
  		Ejercicios ejercicios = new Ejercicios();
 		int matrizNum[][]= {
