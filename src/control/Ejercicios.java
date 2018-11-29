@@ -590,8 +590,8 @@ public class Ejercicios {
 				int numMover;
 				for (int i = 0; i < lista.length / 2; i++) {
 					numMover = lista[i];
-					lista[i] = lista[lista.length -1 -i];
-					lista[lista.length -1 -i] = numMover;
+					lista[i] = lista[lista.length -i -1];
+					lista[lista.length -i -1] = numMover;
 				}
 				//System.out.println("Lista mezclada --> " + Arrays.toString(lista));
 			}
@@ -695,6 +695,10 @@ public class Ejercicios {
 				return resultado;
 			}
 		
+			// CORREGIR !!!!!!!!!!!!!!!!!!!
+			
+			
+			
 	
 	/* 	--------------------------------------- EJERCICIOS -----------------------------------------	28/11/2018 
 		1) Declarar en la clase "Ejercicios" un array de personas
@@ -702,7 +706,7 @@ public class Ejercicios {
 	*/		
 			
 			//----------ACTIVIDAD: Mostrar nombre progenitor sus padres y sus hijos-------------------------
-			public Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
+			private Persona [] personas;          //1.- Declarar en la clase "Ejercicios" un array de persona
 			
 			public void hijosPersona() {
 				//personas[0].getHijosBiologicos(); //accedemos a una persona concreta y muestra sus hijos
@@ -750,7 +754,8 @@ public class Ejercicios {
 		ejercicio.hijosPersona();
 		
 		
-			
+		
+	
 		
 		
 	
