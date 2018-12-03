@@ -31,8 +31,6 @@ public class Persona {
 		this.hijosBiologicos = hijosBiologicos;
 
 	}
-
-	
 	 
 	 public int caminar (int numPasos) {
 		 

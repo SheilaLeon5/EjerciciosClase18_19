@@ -317,19 +317,20 @@ public class Ejercicios {
 */	 
 	 
 	/* ---------ACTIVIDAD: Dan dos cadenas de caracteres por parámetros que hay que comparar entre sí (CompareTo)
-
+	public void comparaCadenaOrdenAlf(String cadena1, String cadena2){
+		if (cadena2.compareTo(cadena1) == 0) {
+			System.out.println("'" + cadena1 + "'" + " es igual léxicamente que "+ "'" + cadena2 + "'");
+		}else {
+			if (cadena2.compareTo(cadena1)<0) {
+				System.out.println("'" + cadena2 + "'" + " es mayor léxicamente que "+ "'" + cadena1 + "'");
+			}else {
+				System.out.println("'" + cadena1 + "'" + " es mayor léxicamente que "+ "'" + cadena2 + "'");
+			}
+		}	
+	}
 	*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
 	
 	/* ---------ACTIVIDAD: Hacer un método que recorra y devuleva un acumulado de ventas por vendedor. 31/10/2018
 
@@ -686,17 +687,12 @@ public class Ejercicios {
 			
 	// --- ACTIVIDAD: Una vez ordenado cada arrays de la matriz ahora hay que ORDENAR TODA la matriz comparando con los array  22/11/2018
 			public int[] matrizToArrayOrdenado(int[][] matriz) {
-				int [] resultado = new int[1];
-				ordenaFilaMatriz(matriz);
+				int [] resultado = new int[0];
 				for (int i = 0; i < matriz.length; i++) {
-					resultado = matriz[i];
-					resultado  = mezclaListaOrdenadas(matriz[i], resultado);
+					resultado  = mezclaListaOrdenadas(resultado, matriz[i]);
 				}
 				return resultado;
 			}
-		
-			// CORREGIR !!!!!!!!!!!!!!!!!!!
-			
 			
 			
 	
@@ -729,54 +725,9 @@ public class Ejercicios {
 
 	public static void main(String[]args) {
 		
-
-		
-		Persona sheila = new Persona("78474714","Sheila", 50, null, 'F', new Persona[0]);  //Crear sheila
-		Persona cindy = new Persona("78474718","Cindy", 55, null, 'F', new Persona[0]);   //Crear cindy
-		Persona[] hijos = {sheila , cindy};
-		
-		Persona orlando = new Persona("45454545","Orlando",33, null,'M',hijos );
-		Persona pepe = new Persona("48888845","Pepe",38,null,'M' , new Persona[3]);
-		Persona concha = new Persona("45999945","Concha",77,null,'F' , new Persona[3]);
-		
-		Persona toni = new Persona("45664545","Toni",33,null,'F' , hijos);
-		
-		sheila.setMadre(toni);
-		sheila.setPadre(orlando);
-		
-		orlando.setMadre(concha);
-		orlando.setPadre(pepe);
-		
-		
-		Ejercicios ejercicio = new Ejercicios();
-		Persona [] resultado = {sheila,orlando};
-		ejercicio.personas = resultado;
-		ejercicio.hijosPersona();
-		
-		
-		
 	
 		
-		
-	
-/*		Ejercicios ejercicios = new Ejercicios();
-		int matrizNum[][]= {
-				{7,4,6},
-				{6},
-				{5,2,3},
-				{4,2,5,1,9,0,3},
-				{5,6,1,3}
-		};
-		
-		int[] vector = ejercicios.matrizToArrayOrdenado(matrizNum);
-		
-*/
 
-		
-		
-		
-		
-		
 		/*
 		
 		int matrizNum[][]= {
@@ -834,10 +785,8 @@ public class Ejercicios {
 				{4,2,5,1,9,0,3},
 				{5,6,1,3}
 		};
-		ejercicios.matrizToArrayOrdenado(matrizNum);
-		
-		//OJO: Esta actividad hay que comprobarla con el debug porque solo retorna el resultado, no muestro por pantalla
- 
+		int[] vector = ejercicios.matrizToArrayOrdenado(matrizNum);
+		System.out.println(Arrays.toString(vector));
  
  
  
@@ -879,7 +828,7 @@ public class Ejercicios {
  		 Ejercicios ejercicios= new Ejercicios();
 		ejercicios.ordenarArray();
 		
-		CORREGIR!!!
+		PENDIENTE HACER AMPLIACION - LISTA ALEATORIA !!!!!
  		 
 
  		//14/11/2018 -------------------ACTIVIDAD: Ordenar un array de cadenas  
@@ -957,14 +906,11 @@ public class Ejercicios {
 		
  
  		//25/10/2018-----------------------ACTIVIDAD: Dan dos cadenas de caracteres por parámetros que hay que comparar entre sí (CompareTo)
- 		PENDIENTE
- 		
- 		
- 		
- 		
- 		
- 		
- 		
+ 		Ejercicios ejercicios = new Ejercicios();
+		String cadena1 = "hola caracola";
+		String cadena2 = "adios caracol";
+		ejercicios.comparaCadenaOrdenAlf(cadena1,cadena2);
+
  		
  		//25/10/2018-----------------------ACTIVIDAD: Dado una String pasada por parámetros mostrar por pantalla caracter a caracter el String (Método CharAt)
  		Ejercicios ejercicios = new Ejercicios();
