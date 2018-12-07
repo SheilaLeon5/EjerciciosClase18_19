@@ -530,7 +530,7 @@ public class Ejercicios {
 			 *  pero con unos cambios es por ello que decidí copiar y pegar con las variaciones
 			 *  justo encima del método que lo va a llamar para mayor claridad.
 			 */
-/*				public int[] generarListaAleatorios (int n, int inferior, int superior) {
+				public int[] generarListaAleatorios (int n, int inferior, int superior) {
 					Random rnd = new Random();
 					int [] numero = new int[n];
 					for(int i = 0; i<n; i++) {
@@ -560,28 +560,34 @@ public class Ejercicios {
 			
 	//---ACTIVIDAD: (Recorrer matriz irregular )Sumar las columnas de un matriz heterogenea o irregular  14/11/2018  
 			
-			//¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡HACER ACTIVIDAD!!!!!!!
 			
 		//recorrer matriz irregular	
-/*	public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
-		int numColMax=0;
-		for (int i = 0; i < matriz.length; i++) {
-			if(matriz[i].length > numColMax) {
-				numColMax= matriz[i].length;
-			}	
-		}
-		int [] resultado = new int[numColMax];
-		for (int j = 0; j < numColMax; j++) {
-			for (int i = 0; i < matriz.length; i++) {
-				resultado[j] += matriz[i][j]; 
-			}
-		}
-		return resultado;
-		
-	}
-		*/
+
 	
+		public int[] sumaColumnasMatrizHeterogenea(int[][]matriz) {
 			
+			// Saber fila más larga 
+			int sumMaxCol = 0;
+			for (int i = 0; i < matriz.length; i++) {
+				if(sumMaxCol < matriz[i].length) {
+					sumMaxCol = matriz[i].length;
+				}
+			}
+			int[]  resultado = new int[sumMaxCol];
+			for (int j = 0; j < sumMaxCol; j++) {
+				for (int i = 0; i < matriz.length; i++) {
+					try {
+					resultado[j] += matriz[i][j];
+					}catch (ArrayIndexOutOfBoundsException e) {
+					}
+				}
+			}	
+			System.out.println(Arrays.toString(resultado));
+			return resultado;	
+		}
+		
+
+		
 
 		//------------------------------ TRES  PEQUEÑOS RETOS -------------------------------------------20/11/2018	
 			
@@ -728,19 +734,11 @@ public class Ejercicios {
 	
 		
 
-		/*
 		
-		int matrizNum[][]= {
-				{5,4,8},
-				{7,2,3,4},
-				{8,5}
-		};		
 		
-		Ejercicios ejercicios = new Ejercicios();
-		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);*/
+		
 				
 		
-
 	//	Persona juan = new Persona();
 	//	int pasos = juan.caminar(20);
 		
@@ -835,6 +833,18 @@ public class Ejercicios {
  		Ejercicios ejercicios= new Ejercicios();
 		String palabras[]= {"zorro","azul","abeja","pez"};
 		ejercicios.ordenarCadena(palabras);
+ 		
+ 		
+ 		//14/11/2018 -------------------ACTIVIDAD: (Recorrer matriz irregular )Sumar las columnas de un matriz heterogenea o irregular
+ 		int matrizNum[][]= {
+				{5,4,8},
+				{7,2,3,4},
+				{8,5}
+		};		
+		
+		Ejercicios ejercicios = new Ejercicios();
+		ejercicios.sumaColumnasMatrizHeterogenea(matrizNum);
+ 		
  		
  		
  		//14/11/2018 -------------------ACTIVIDAD: Pasar una lista de números desordenados y mostrarlos ordenados 
